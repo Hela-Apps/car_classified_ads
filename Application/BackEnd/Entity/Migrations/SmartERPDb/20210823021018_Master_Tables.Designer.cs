@@ -3,14 +3,16 @@ using EntityLibrary.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entity.Migrations.SmartERPDb
 {
     [DbContext(typeof(SmartERPDbContext))]
-    partial class SmartERPDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210823021018_Master_Tables")]
+    partial class Master_Tables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -144,7 +146,7 @@ namespace Entity.Migrations.SmartERPDb
 
                     b.HasKey("Id");
 
-                    b.ToTable("VehicleCondition");
+                    b.ToTable("vehicleCondition");
                 });
 #pragma warning restore 612, 618
         }
