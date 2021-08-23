@@ -12,10 +12,13 @@ namespace EntityLibrary.Context
         public SmartERPDbContext(DbContextOptions<SmartERPDbContext> options) : base(options)
         { }
 
-       // public DbSet<Book> Books { get; set; }
-        //public DbSet<Catalogue> Catalogues { get; set; }
-       // public DbSet<Department> Department { get; set; }
         public DbSet<District> District { get; set; }
+        public DbSet<City> City { get; set; }
+        public DbSet<VehicleCategory> VehicleCategory { get; set; }
+        public DbSet<VehicleCondition> VehicleCondition { get; set; }
+        public DbSet<PriceRange> PriceRange { get; set; }
+        public DbSet<VehicleCompany> VehicleCompany { get; set; }
+        public DbSet<AdsCategory> AdsCategory { get; set; }
 
     }
 }
