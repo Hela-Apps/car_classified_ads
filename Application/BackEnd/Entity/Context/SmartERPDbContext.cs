@@ -19,6 +19,9 @@ namespace EntityLibrary.Context
         public DbSet<PriceRange> PriceRange { get; set; }
         public DbSet<VehicleCompany> VehicleCompany { get; set; }
         public DbSet<AdsCategory> AdsCategory { get; set; }
+        public DbSet<ManuFacturedYear> ManuFacturedYear { get; set; }
+        public DbSet<Transmission> Transmission { get; set; }
+        public DbSet<FuelType> FuelType { get; set; }
 
     }
 }
