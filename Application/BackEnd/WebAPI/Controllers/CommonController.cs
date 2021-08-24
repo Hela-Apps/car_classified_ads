@@ -19,19 +19,19 @@ namespace WebAPI.Controllers
             _commonService = commonService;
         }
 
-        //[HttpPost]
-        //[Route("AddCountries")]
-        //public async Task<IActionResult> AddCountries(List<string> countryNameList)
-        //{
-        //    try
-        //    {
-        //        return Ok(await _commonService.AddCountries(countryNameList));
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex.InnerException;
-        //    }
+        [HttpGet]
+        [Route("GetAllCompanies")]
+        public async Task<IActionResult> GetAllCompanies()
+        {
+            try
+            {
+                return Ok(await _commonService.GetAllcompanies());
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
 
-        //}
+        }
     }
 }

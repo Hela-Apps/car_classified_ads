@@ -1,4 +1,5 @@
 ﻿using Domain.ViewModel;
+using Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Domain.CommonDomain
 {
     public interface ICommonService
     {
-        //Task<List<int>> AddCountries(List<string> countryNameList);
+        Task<List<VehicleCompany>> GetAllcompanies();
     }
 }
