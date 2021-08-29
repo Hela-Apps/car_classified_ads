@@ -9,6 +9,6 @@ namespace Domain.CommonDomain
 {
     public interface ICommonService
     {
-        Task<List<VehicleCompany>> GetAllcompanies();
+        Task<IEnumerable<VehicleCompany>> GetAllcompanies();
     }
 }

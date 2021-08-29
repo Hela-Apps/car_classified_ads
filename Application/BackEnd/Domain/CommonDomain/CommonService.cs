@@ -19,9 +19,9 @@ namespace Domain.CommonDomain
             _companyRepository = companyRepository;
         }
 
-        public Task<List<VehicleCompany>> GetAllcompanies()
+        public async Task<IEnumerable<VehicleCompany>> GetAllcompanies()
         {
-            throw new NotImplementedException();
+            return await _companyRepository.GetAll();
         }
     }
 }

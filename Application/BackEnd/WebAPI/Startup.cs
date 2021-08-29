@@ -52,7 +52,7 @@ namespace SmartERP.API
 
             // services.AddTransient<IBooksRepository, BooksRepository>();
             // services.AddTransient<ICatalogueRepository, CatalogueRepository>();
-            // services.AddTransient<ICustomerRepository, CustomerRepository>();
+             services.AddTransient<ICompanyRepository, CompanyRepository>();
             //services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
            
