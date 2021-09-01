@@ -63,5 +63,35 @@ namespace WebAPI.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Route("GetAllDistricts")]
+        public async Task<IActionResult> GetAllDistrict()
+        {
+            try
+            {
+                return Ok(await _commonService.GetAllDistricts());
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+
+        }
+
+        [HttpGet]
+        [Route("GetAllCitiesbyDistrictId")]
+        public async Task<IActionResult> GetAllCitiesbyDistrictId(int districtId)
+        {
+            try
+            {
+                return Ok(await _commonService.GetAllCitiesbyDistrictId(districtId));
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+
+        }
     }
 }
