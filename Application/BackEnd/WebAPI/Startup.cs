@@ -53,7 +53,7 @@ namespace SmartERP.API
              services.AddTransient<IVehicleConditionRepository, VehicleConditionRepository>();
              services.AddTransient<IVehicleCategoryRepository, VehicleCategoryRepository>();
              services.AddTransient<IVehicleCompanyRepository, VehicleCompanyRepository>();
-            //services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<ICityRepository, CityRepository>();
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
            
             services.AddTransient<IDistrictRepository, DistrictRepository>();
