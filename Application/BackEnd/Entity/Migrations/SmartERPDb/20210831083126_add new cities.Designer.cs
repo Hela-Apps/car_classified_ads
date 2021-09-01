@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.Migrations.SmartERPDb
 {
     [DbContext(typeof(SmartDbContext))]
-    [Migration("20210823022953_Master_Tables2")]
-    partial class Master_Tables2
+    [Migration("20210831083126_add new cities")]
+    partial class addnewcities
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,7 +51,16 @@ namespace Entity.Migrations.SmartERPDb
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<float>("Latitude")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Longitude")
+                        .HasColumnType("real");
+
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -71,6 +80,9 @@ namespace Entity.Migrations.SmartERPDb
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProvienceId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -126,9 +138,30 @@ namespace Entity.Migrations.SmartERPDb
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
 
                     b.ToTable("PriceRange");
+                });
+
+            modelBuilder.Entity("Entity.Models.Provience", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provience");
                 });
 
             modelBuilder.Entity("Entity.Models.Transmission", b =>

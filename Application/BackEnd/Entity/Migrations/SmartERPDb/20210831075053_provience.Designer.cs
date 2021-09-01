@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.Migrations.SmartERPDb
 {
     [DbContext(typeof(SmartDbContext))]
-    [Migration("20210823022953_Master_Tables2")]
-    partial class Master_Tables2
+    [Migration("20210831075053_provience")]
+    partial class provience
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,6 +72,9 @@ namespace Entity.Migrations.SmartERPDb
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProvienceId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("District");
@@ -126,9 +129,30 @@ namespace Entity.Migrations.SmartERPDb
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
 
                     b.ToTable("PriceRange");
+                });
+
+            modelBuilder.Entity("Entity.Models.Provience", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provience");
                 });
 
             modelBuilder.Entity("Entity.Models.Transmission", b =>

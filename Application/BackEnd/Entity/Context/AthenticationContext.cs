@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EntityLibrary.Context
+namespace Entity.Context
 {
     public class AthenticationContext : IdentityDbContext
     {

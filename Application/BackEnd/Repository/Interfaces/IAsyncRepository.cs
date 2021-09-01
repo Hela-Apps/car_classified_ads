@@ -1,5 +1,5 @@
 ﻿using Entity;
-using EntityLibrary;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace SmartERP.Repository.Interfaces
 {
-    public interface IAsyncRepository<T> where T: BaseEntity
+    public interface IAsyncRepository<T> where T: class
     {
 
         Task<T> GetById(long id);
         Task<T> FirstOrDefault(Expression<Func<T, bool>> predicate);
 
-        Task<long> Add(T entity);
+        Task<int> Add(T entity);
         Task Update(T entity);
         Task Remove(T entity);
 

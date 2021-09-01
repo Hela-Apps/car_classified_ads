@@ -33,5 +33,35 @@ namespace WebAPI.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Route("GetAllCategories")]
+        public async Task<IActionResult> GetAllCategories()
+        {
+            try
+            {
+                return Ok(await _commonService.GetAllCategories());
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+
+        }
+
+        [HttpGet]
+        [Route("GetAllConditions")]
+        public async Task<IActionResult> GetAllConditions()
+        {
+            try
+            {
+                return Ok(await _commonService.GetAllConditions());
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+
+        }
     }
 }

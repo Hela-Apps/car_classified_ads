@@ -12,7 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Text;
-using EntityLibrary.Context;
+using Entity.Context;
 using SmartERP.Repository.Implementation;
 using SmartERP.Repository.Interfaces;
 using AutoMapper;
@@ -50,16 +50,16 @@ namespace SmartERP.API
                 });
             });
 
-            // services.AddTransient<IBooksRepository, BooksRepository>();
-            // services.AddTransient<ICatalogueRepository, CatalogueRepository>();
-             services.AddTransient<ICompanyRepository, CompanyRepository>();
+             services.AddTransient<IVehicleConditionRepository, VehicleConditionRepository>();
+             services.AddTransient<IVehicleCategoryRepository, VehicleCategoryRepository>();
+             services.AddTransient<IVehicleCompanyRepository, VehicleCompanyRepository>();
             //services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
            
             services.AddTransient<IDistrictRepository, DistrictRepository>();
             services.AddTransient<ICommonService, CommonService>();
 
-            services.AddDbContext<SmartERPDbContext>(options =>
+            services.AddDbContext<SmartDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("carDbConnect")));
 
             //inject Appsettings
