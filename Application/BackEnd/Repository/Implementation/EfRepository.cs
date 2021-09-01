@@ -1,6 +1,6 @@
 ﻿using Entity;
-using EntityLibrary;
-using EntityLibrary.Context;
+using Entity;
+using Entity.Context;
 using Microsoft.EntityFrameworkCore;
 using SmartERP.Domain;
 using SmartERP.Repository.Interfaces;
@@ -18,11 +18,11 @@ namespace SmartERP.Repository.Implementation
 
         #region Fields
 
-        protected SmartERPDbContext Context;
+        protected SmartDbContext Context;
 
         #endregion
 
-        public EfRepository(SmartERPDbContext context)
+        public EfRepository(SmartDbContext context)
         {
             Context = context;
         }
@@ -73,6 +73,11 @@ namespace SmartERP.Repository.Implementation
 
         public Task<int> CountWhere(Expression<Func<T, bool>> predicate)
             => Context.Set<T>().CountAsync(predicate);
+
+        Task<int> IAsyncRepository<T>.Add(T entity)
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
 

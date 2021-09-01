@@ -5,13 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EntityLibrary.Context
+namespace Entity.Context
 {
-    public class SmartERPDbContext : DbContext
+    public class SmartDbContext : DbContext
     {
-        public SmartERPDbContext(DbContextOptions<SmartERPDbContext> options) : base(options)
+        public SmartDbContext(DbContextOptions<SmartDbContext> options) : base(options)
         { }
 
+        public DbSet<Provience> Provience { get; set; }
         public DbSet<District> District { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<VehicleCategory> VehicleCategory { get; set; }

@@ -1,7 +1,8 @@
 ﻿using Entity.Models;
-using EntityLibrary.Context;
+using Entity.Context;
 using Microsoft.EntityFrameworkCore;
 using Repository.Interfaces;
+using SmartERP.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,10 @@ using System.Threading.Tasks;
 
 namespace Repository.Implementation
 {
-    public class CompanyRepository: ICompanyRepository
+    public class VehicleCompanyRepository : IVehicleCompanyRepository
     {
-        protected SmartERPDbContext _context;
-        public CompanyRepository(SmartERPDbContext context)
+        protected SmartDbContext _context;
+        public VehicleCompanyRepository(SmartDbContext context)
         {
             _context = context;
         }

@@ -1,5 +1,5 @@
 ﻿using Entity.Models;
-using EntityLibrary.Context;
+using Entity.Context;
 using Microsoft.EntityFrameworkCore;
 using Repository.Interfaces;
 using System;
@@ -13,8 +13,8 @@ namespace Repository.Implementation
 {
     public class DistrictRepository : IDistrictRepository
     {
-        protected SmartERPDbContext _context;
-        public DistrictRepository(SmartERPDbContext context)
+        protected SmartDbContext _context;
+        public DistrictRepository(SmartDbContext context)
         {
             _context = context;
         }
