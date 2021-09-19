@@ -93,5 +93,20 @@ namespace WebAPI.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Route("GetAllManuFacturedYear")]
+        public async Task<IActionResult> GetAllManuFacturedYear()
+        {
+            try
+            {
+                return Ok(await _commonService.GetAllYears());
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+
+        }
     }
 }
