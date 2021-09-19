@@ -14,5 +14,6 @@ namespace Domain.CommonDomain
         Task<IEnumerable<VehicleCondition>> GetAllConditions();
         Task<IEnumerable<District>> GetAllDistricts();
         Task<IEnumerable<City>> GetAllCitiesbyDistrictId(int id);
+        Task<IEnumerable<ManuFacturedYear>> GetAllYears();
     }
 }

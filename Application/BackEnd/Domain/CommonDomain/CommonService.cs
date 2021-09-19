@@ -18,17 +18,20 @@ namespace Domain.CommonDomain
         private readonly IVehicleConditionRepository _conditionRepository;
         private readonly IDistrictRepository _districtRepository;
         private readonly ICityRepository _cityRepository;
+        private readonly IManuFacturedYearRepository _manuFacturedYearRepository;
         public CommonService(IVehicleCompanyRepository companyRepository,
             IVehicleCategoryRepository categoryRepository,
             IVehicleConditionRepository conditionRepository,
             IDistrictRepository districtRepository,
-            ICityRepository cityRepository)
+            ICityRepository cityRepository,
+            IManuFacturedYearRepository manuFacturedYearRepository)
         {
             _companyRepository = companyRepository;
             _categoryRepository = categoryRepository;
             _conditionRepository = conditionRepository;
             _districtRepository = districtRepository;
             _cityRepository = cityRepository;
+            _manuFacturedYearRepository = manuFacturedYearRepository;
         }
 
         public async Task<IEnumerable<VehicleCompany>> GetAllcompanies()
@@ -57,6 +60,12 @@ namespace Domain.CommonDomain
         public async Task<IEnumerable<City>> GetAllCitiesbyDistrictId(int id)
         {
             var conditions = await _cityRepository.GetAllbyDistrictId(id);
+            return conditions.Where(x => x.IsActive == true);
+        }
+
+        public async Task<IEnumerable<ManuFacturedYear>> GetAllYears()
+        {
+            var conditions = await _manuFacturedYearRepository.GetAll();
             return conditions.Where(x => x.IsActive == true);
         }
     }

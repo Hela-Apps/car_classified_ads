@@ -50,12 +50,13 @@ namespace SmartERP.API
                 });
             });
 
-             services.AddTransient<IVehicleConditionRepository, VehicleConditionRepository>();
-             services.AddTransient<IVehicleCategoryRepository, VehicleCategoryRepository>();
-             services.AddTransient<IVehicleCompanyRepository, VehicleCompanyRepository>();
+            services.AddTransient<IVehicleConditionRepository, VehicleConditionRepository>();
+            services.AddTransient<IVehicleCategoryRepository, VehicleCategoryRepository>();
+            services.AddTransient<IVehicleCompanyRepository, VehicleCompanyRepository>();
             services.AddTransient<ICityRepository, CityRepository>();
+            services.AddTransient<IManuFacturedYearRepository, ManuFacturedYearRepository>();
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
-           
+
             services.AddTransient<IDistrictRepository, DistrictRepository>();
             services.AddTransient<ICommonService, CommonService>();
 
@@ -73,7 +74,8 @@ namespace SmartERP.API
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(x => {
+            }).AddJwtBearer(x =>
+            {
                 x.RequireHttpsMetadata = false;
                 x.SaveToken = false;
                 x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
