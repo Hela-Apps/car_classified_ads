@@ -1,0 +1,34 @@
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 999999;
+    text-align: center;
+  }
+  .logocolor {
+    color: #A46FBF !important;
+  }
+  .centercenter {
+    position: relative;
+    top: 50%;
+  }
+  .spinner-grow2 {
+    display: inline-block;
+    width: 100px !important;
+    height: 100px !important;
+    vertical-align: text-bottom;
+    background-color: currentColor;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: spinner-grow .75s linear infinite;
+    animation: spinner-grow .75s linear infinite;
+  }
+  .wrapping-content .row {
+    margin: 10px !important;
+}
+.search-button{
+  margin-left: 109%;
+}
