@@ -44,7 +44,8 @@ namespace SmartERP.API.Controllers
                 Email = userModel.Email,
                 FullName = userModel.FullName,
                 UserName = userModel.UserName,
-                PhoneNumber = userModel.PhoneNumber
+                PhoneNumber = userModel.PhoneNumber,
+                CityId = userModel.CityId
             };
             try
             {
