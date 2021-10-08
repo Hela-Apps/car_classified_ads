@@ -44,7 +44,7 @@ namespace SmartERP.API
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost", "http://localhost:4200", "http://localhost:8100")
+                    builder.WithOrigins("http://localhost", "http://localhost:4200", "http://localhost:3000")
                                         .AllowAnyHeader()
                                 .AllowAnyMethod();
                 });

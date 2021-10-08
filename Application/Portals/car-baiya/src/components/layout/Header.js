@@ -22,22 +22,22 @@ export default class Header extends Component {
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="icon-top text-center text-sm-center text-md-left text-lg-left text-xl-left">
                 <div className="icons">
-                  <a href="#"> <i className="fa fa-facebook" /> </a>
+                  <a href="www.google.com"> <i className="fa fa-facebook" /> </a>
                 </div>
                 <div className="icons">
-                  <a href="#"> <i className="fa fa-twitter" /> </a>
+                  <a href="www.google.com"> <i className="fa fa-twitter" /> </a>
                 </div>
                 <div className="icons">
-                  <a href="#"> <i className="fa fa-youtube-play" /></a>
+                  <a href="www.google.com"> <i className="fa fa-youtube-play" /></a>
                 </div>
                 <div className="icons">
-                  <a href="#"> <i className=" fa fa-pinterest" /></a>
+                  <a href="www.google.com"> <i className=" fa fa-pinterest" /></a>
                 </div>
                 <div className="icons">
-                  <a href="#"> <i className=" fa fa-instagram" /></a>
+                  <a href="www.google.com"> <i className=" fa fa-instagram" /></a>
                 </div>
                 <div className="icons">
-                  <a href="#"> <i className=" fa fa-whatsapp" /></a>
+                  <a href="www.google.com"> <i className=" fa fa-whatsapp" /></a>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default class Header extends Component {
           <a className="navbar-brand zeropadd" href="index.html">
             <img src="img/logo_200x200.png" alt="logo" className="max-width-60px" />
           </a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="www.google.comnavbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
             <span className="navbar-toggler-icon" />
             <span className="navbar-toggler-icon" />
@@ -91,7 +91,7 @@ export default class Header extends Component {
               <a className="nav-link" href="category.html">Advance Search</a>
             </li>
             <li className="nav-item dropdown">
-              <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="nav-link dropdown-toggle">Categories <i className="fa fa-angle-down" /></a>
+              <a href="www.google.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="nav-link dropdown-toggle">Categories <i className="fa fa-angle-down" /></a>
               <ul className="dropdown-menu border-0 shadow">
                 <li><a href="category.html" className="dropdown-item">Jobs </a></li>
                 <li><a href="category.html" className="dropdown-item">Properties</a></li>
