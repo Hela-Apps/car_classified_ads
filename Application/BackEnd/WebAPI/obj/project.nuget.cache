@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "h6srpmiusvCv59OqN13w32ApNmjn81RFCShS0ZK6gtgz3EmV8oLPhc2aWiO8B6Kf4kcPqMEEw15s1LZ3u+zxCw==",
+  "dgSpecHash": "7mQO1+H8oc0lI0eJxpeveYncrThCPyCs6CCFbc/39SVfbmsTXJMlVu9CwhzSUHdb3/CmY9L/HdJ89WUAbntSew==",
   "success": true,
-  "projectFilePath": "D:\\Chamath\\Works\\Vehicle Web\\car_classified_ads\\Application\\BackEnd\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "D:\\My practice\\gitHub\\car_classified_ads\\Application\\BackEnd\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ChamathVidurangaBIST\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\ChamathVidurangaBIST\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ChamathVidurangaBIST\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\ChamathVidurangaBIST\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.6\\microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
     "C:\\Users\\ChamathVidurangaBIST\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.6\\microsoft.aspnetcore.cryptography.internal.3.1.6.nupkg.sha512",

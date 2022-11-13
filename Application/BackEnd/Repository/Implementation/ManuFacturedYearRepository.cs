@@ -13,8 +13,8 @@ namespace Repository.Implementation
 {
     public class ManuFacturedYearRepository : IManuFacturedYearRepository
     {
-        protected SmartDbContext _context;
-        public ManuFacturedYearRepository(SmartDbContext context)
+        protected CarDbContext _context;
+        public ManuFacturedYearRepository(CarDbContext context)
         {
             _context = context;
         }

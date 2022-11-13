@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SmartERP.Domain.Models
+namespace Entity.ViewModel
 {
-    public class LoginModel
+    public class LoginViewModel 
     {
         public string UserName { get; set; }
         public string Password { get; set; }

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using SmartERP.Domain.Models;
 using SmartERP.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -14,12 +13,15 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Entity.Context;
 using Entity.Models;
+using WebAPI.Controllers;
+using Microsoft.AspNetCore.Authorization;
+using Entity.ViewModel;
 
 namespace SmartERP.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/applicationUsers")]
     [ApiController]
-    public class ApplicationUserController : ControllerBase
+    public class ApplicationUserController : ApiController
     {
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
@@ -33,22 +35,15 @@ namespace SmartERP.API.Controllers
             _AthenticationContext = athenticationContext;
             _appSettings = appSettings;
         }
-
+        [AllowAnonymous]
         [HttpPost]
         [Route("Register")]
-        //POST : /api/ApplicationUser/Register
-        public async Task<Object> PostApplicationUser(ApplicationUserModel userModel)
-        {
-            var applicationUser = new ApplicationUser()
-            {
-                Email = userModel.Email,
-                FullName = userModel.FullName,
-                UserName = userModel.UserName,
-                PhoneNumber = userModel.PhoneNumber,
-                CityId = userModel.CityId
-            };
+        //POST : /api/ApplicationUsers/Register
+        public async Task<Object> PostApplicationUser(ApplicationUserViewModel userModel)
+        {           
             try
             {
+                var applicationUser = Mapper.Map<ApplicationUser>(userModel);
                 var result = await _userManager.CreateAsync(applicationUser, userModel.Password);
                 return Ok(result);
             }
@@ -62,7 +57,7 @@ namespace SmartERP.API.Controllers
         [HttpPost]
         [Route("Login")]
         //POST:/api/ApplicationUser/Login
-        public async Task<IActionResult> Login(LoginModel model)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
             var user = await _userManager.FindByNameAsync(model.UserName);
             if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))

@@ -13,8 +13,8 @@ namespace Repository.Implementation
 {
    public  class CityRepository : ICityRepository
     {
-        protected SmartDbContext _context;
-        public CityRepository(SmartDbContext context)
+        protected CarDbContext _context;
+        public CityRepository(CarDbContext context)
         {
             _context = context;
         }

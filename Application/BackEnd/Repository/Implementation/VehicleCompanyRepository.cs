@@ -14,8 +14,8 @@ namespace Repository.Implementation
 {
     public class VehicleCompanyRepository : IVehicleCompanyRepository
     {
-        protected SmartDbContext _context;
-        public VehicleCompanyRepository(SmartDbContext context)
+        protected CarDbContext _context;
+        public VehicleCompanyRepository(CarDbContext context)
         {
             _context = context;
         }

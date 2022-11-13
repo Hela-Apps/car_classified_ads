@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Entity.Migrations.SmartERPDb
+namespace Entity.Migrations.CarDb
 {
-    public partial class Master_Tables : Migration
+    public partial class initial_tbl_creation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,11 +28,57 @@ namespace Entity.Migrations.SmartERPDb
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     DistrictId = table.Column<int>(nullable: false),
+                    PostCode = table.Column<string>(nullable: true),
+                    Latitude = table.Column<float>(nullable: false),
+                    Longitude = table.Column<float>(nullable: false),
                     IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_City", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "District",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProvienceId = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_District", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FuelType",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FuelType", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ManuFacturedYear",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Year = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ManuFacturedYear", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -42,11 +88,40 @@ namespace Entity.Migrations.SmartERPDb
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: true),
+                    Value = table.Column<double>(nullable: false),
                     IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PriceRange", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Provience",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Provience", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Transmission",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Transmission", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -78,7 +153,7 @@ namespace Entity.Migrations.SmartERPDb
                 });
 
             migrationBuilder.CreateTable(
-                name: "vehicleCondition",
+                name: "VehicleCondition",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -88,7 +163,7 @@ namespace Entity.Migrations.SmartERPDb
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_vehicleCondition", x => x.Id);
+                    table.PrimaryKey("PK_VehicleCondition", x => x.Id);
                 });
         }
 
@@ -101,7 +176,22 @@ namespace Entity.Migrations.SmartERPDb
                 name: "City");
 
             migrationBuilder.DropTable(
+                name: "District");
+
+            migrationBuilder.DropTable(
+                name: "FuelType");
+
+            migrationBuilder.DropTable(
+                name: "ManuFacturedYear");
+
+            migrationBuilder.DropTable(
                 name: "PriceRange");
+
+            migrationBuilder.DropTable(
+                name: "Provience");
+
+            migrationBuilder.DropTable(
+                name: "Transmission");
 
             migrationBuilder.DropTable(
                 name: "VehicleCategory");
@@ -110,7 +200,7 @@ namespace Entity.Migrations.SmartERPDb
                 name: "VehicleCompany");
 
             migrationBuilder.DropTable(
-                name: "vehicleCondition");
+                name: "VehicleCondition");
         }
     }
 }

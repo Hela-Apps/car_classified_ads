@@ -13,8 +13,8 @@ namespace Repository.Implementation
 {
     public class DistrictRepository : IDistrictRepository
     {
-        protected SmartDbContext _context;
-        public DistrictRepository(SmartDbContext context)
+        protected CarDbContext _context;
+        public DistrictRepository(CarDbContext context)
         {
             _context = context;
         }

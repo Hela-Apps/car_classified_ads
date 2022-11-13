@@ -1,5 +1,4 @@
 ﻿using Entity.Models;
-using SmartERP.Domain.Models;
 using SmartERP.Repository.Interfaces;
 using System;
 using System.Collections.Generic;

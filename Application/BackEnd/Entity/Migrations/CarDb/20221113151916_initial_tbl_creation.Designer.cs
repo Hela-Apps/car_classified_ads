@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Entity.Migrations.SmartERPDb
+namespace Entity.Migrations.CarDb
 {
-    [DbContext(typeof(SmartDbContext))]
-    [Migration("20210831074823_create cities_district_provience")]
-    partial class createcities_district_provience
+    [DbContext(typeof(CarDbContext))]
+    [Migration("20221113151916_initial_tbl_creation")]
+    partial class initial_tbl_creation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,7 +51,16 @@ namespace Entity.Migrations.SmartERPDb
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<float>("Latitude")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Longitude")
+                        .HasColumnType("real");
+
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -135,6 +144,24 @@ namespace Entity.Migrations.SmartERPDb
                     b.HasKey("Id");
 
                     b.ToTable("PriceRange");
+                });
+
+            modelBuilder.Entity("Entity.Models.Provience", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provience");
                 });
 
             modelBuilder.Entity("Entity.Models.Transmission", b =>

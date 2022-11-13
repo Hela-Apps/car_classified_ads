@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Chamath\\Works\\Vehicle Web\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj": {}
+    "D:\\My practice\\gitHub\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj": {}
   },
   "projects": {
-    "D:\\Chamath\\Works\\Vehicle Web\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj": {
+    "D:\\My practice\\gitHub\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Chamath\\Works\\Vehicle Web\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj",
+        "projectUniqueName": "D:\\My practice\\gitHub\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj",
         "projectName": "ClassifiedAds.Tools.ExtractExcel",
-        "projectPath": "D:\\Chamath\\Works\\Vehicle Web\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj",
+        "projectPath": "D:\\My practice\\gitHub\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\ClassifiedAds.Tools.ExtractExcel.csproj",
         "packagesPath": "C:\\Users\\ChamathVidurangaBIST\\.nuget\\packages\\",
-        "outputPath": "D:\\Chamath\\Works\\Vehicle Web\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\obj\\",
+        "outputPath": "D:\\My practice\\gitHub\\car_classified_ads\\Application\\Tools\\ClassifiedAds.Tools.ExtractExcel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ChamathVidurangaBIST\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "ExcelDataReader": {
               "target": "Package",
@@ -74,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     }

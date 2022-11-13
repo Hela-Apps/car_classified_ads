@@ -1,15 +1,14 @@
 ﻿using Entity.Models;
 using Microsoft.EntityFrameworkCore;
-using SmartERP.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Entity.Context
 {
-    public class SmartDbContext : DbContext
+    public class CarDbContext : DbContext
     {
-        public SmartDbContext(DbContextOptions<SmartDbContext> options) : base(options)
+        public CarDbContext(DbContextOptions<CarDbContext> options) : base(options)
         { }
 
         public DbSet<Provience> Provience { get; set; }
