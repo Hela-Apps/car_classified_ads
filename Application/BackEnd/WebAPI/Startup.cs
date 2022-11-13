@@ -20,6 +20,7 @@ using Entity.Models;
 using Repository.Interfaces;
 using Repository.Implementation;
 using Domain.CommonDomain;
+using Entity.Mappings;
 
 namespace SmartERP.API
 {
@@ -39,12 +40,20 @@ namespace SmartERP.API
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
 
+            // Auto Mapper Configurations
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
             services.AddCors(options =>
             {
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost", "http://localhost:4200", "http://localhost:8100")
+                    builder.WithOrigins("http://localhost", "http://localhost:4200", "http://localhost:3000")
                                         .AllowAnyHeader()
                                 .AllowAnyMethod();
                 });
@@ -60,7 +69,7 @@ namespace SmartERP.API
             services.AddTransient<IDistrictRepository, DistrictRepository>();
             services.AddTransient<ICommonService, CommonService>();
 
-            services.AddDbContext<SmartDbContext>(options =>
+            services.AddDbContext<CarDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("carDbConnect")));
 
             //inject Appsettings
@@ -107,7 +116,7 @@ namespace SmartERP.API
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Logistic ERP API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Car Sale API", Version = "v1" });
             });
         }
 
@@ -121,7 +130,7 @@ namespace SmartERP.API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Logistic ERP API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Car Sale API");
             });
             app.UseHttpsRedirection();
 

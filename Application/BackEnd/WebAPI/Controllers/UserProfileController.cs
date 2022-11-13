@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using SmartERP.Domain.Models;
+using WebAPI.Controllers;
 
 namespace SmartERP.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/userProfiles")]
     [ApiController]
-    public class UserProfileController : ControllerBase
+    public class UserProfileController : ApiController
     {
         private UserManager<ApplicationUser> _userManager;
 

@@ -13,8 +13,8 @@ namespace Repository.Implementation
 {
     public class VehicleConditionRepository : IVehicleConditionRepository
     {
-        protected SmartDbContext _context;
-        public VehicleConditionRepository(SmartDbContext context)
+        protected CarDbContext _context;
+        public VehicleConditionRepository(CarDbContext context)
         {
             _context = context;
         }

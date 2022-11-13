@@ -229,6 +229,9 @@ namespace Entity.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
+                    b.Property<int>("CityId")
+                        .HasColumnType("int");
+
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(150)");
 

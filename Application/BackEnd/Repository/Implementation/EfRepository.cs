@@ -1,8 +1,6 @@
 ﻿using Entity;
-using Entity;
 using Entity.Context;
 using Microsoft.EntityFrameworkCore;
-using SmartERP.Domain;
 using SmartERP.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,11 +16,11 @@ namespace SmartERP.Repository.Implementation
 
         #region Fields
 
-        protected SmartDbContext Context;
+        protected CarDbContext Context;
 
         #endregion
 
-        public EfRepository(SmartDbContext context)
+        public EfRepository(CarDbContext context)
         {
             Context = context;
         }

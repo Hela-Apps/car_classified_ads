@@ -27,7 +27,7 @@ namespace BruCensus.Tools.CreateQuestionnaire
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<SmartDbContext>(options =>
+            services.AddDbContext<CarDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddHostedService<StartupHostedService>();            
             services.AddTransient<ICitiesExtractor, CitiesExtractor>();            

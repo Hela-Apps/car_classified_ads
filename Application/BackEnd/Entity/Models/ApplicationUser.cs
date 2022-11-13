@@ -10,5 +10,7 @@ namespace Entity.Models
     {
         [Column(TypeName = "nvarchar(150)")]
         public string FullName { get; set; }
+
+        public int CityId { get; set; }
     }
 }

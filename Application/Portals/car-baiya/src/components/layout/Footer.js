@@ -60,12 +60,12 @@ export default class Footer extends Component {
           <div className="col-lg-3 col-md-6 col-sm-12">
             <h3>Location</h3>
             <ul>
-              <li><a href="#">London</a></li>
-              <li><a href="#">Barcelona</a></li>
-              <li><a href="#">New York</a></li>
-              <li><a href="#">France</a></li>
-              <li><a href="#">Lahore</a></li>
-              <li><a href="#">Mumbai</a></li>
+              <li><a href="www.google.com">London</a></li>
+              <li><a href="www.google.com">Barcelona</a></li>
+              <li><a href="www.google.com">New York</a></li>
+              <li><a href="www.google.com">France</a></li>
+              <li><a href="www.google.com">Lahore</a></li>
+              <li><a href="www.google.com">Mumbai</a></li>
             </ul>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
@@ -74,7 +74,7 @@ export default class Footer extends Component {
               <li><a href="index.html">Home</a></li>
               <li><a href="aboutus.html">About</a></li>
               <li><a href="contactus.html">Contact Us</a></li>
-              <li><a href="#">Login</a></li>
+              <li><a href="www.google.com">Login</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="faq.html">Faqs</a></li>
             </ul>
@@ -85,15 +85,15 @@ export default class Footer extends Component {
             <div className="row">
               <div className="col-md-6 zeropadd">
                 <p>2019 Maida Themes. copyright @ 2016 - 2019 Powered By <i className="fa fa-heart" />
-                  <a href="#" className="greens">Maida</a>
+                  <a href="www.google.com" className="greens">Maida</a>
                 </p>
               </div>
               <div className="col-md-6 zeropaddon768">
                 <ul className="pages-links zeropadd">
-                  <li><a href="#">Terms &amp; Condition</a></li>
+                  <li><a href="www.google.com">Terms &amp; Condition</a></li>
                   <li><a href="dashboard.html">Dashboard</a></li>
-                  <li><a href="#">Privacy Policy </a></li>
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="www.google.com">Privacy Policy </a></li>
+                  <li><a href="www.google.com">About Us</a></li>
                 </ul>
               </div>
             </div>

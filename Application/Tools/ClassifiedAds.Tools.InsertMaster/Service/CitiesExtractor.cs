@@ -15,12 +15,12 @@ namespace ClassifiedAds.Tools.InsertMaster.Service
 {
     public class CitiesExtractor :ICitiesExtractor
     {
-        private readonly SmartDbContext context;
+        private readonly CarDbContext context;
         private readonly IConfiguration configuration;
         private readonly ILogger<CitiesExtractor> logger;
         private readonly IList<string> uniqueIds = new List<string>();
 
-        public CitiesExtractor(SmartDbContext context, IConfiguration configuration, ILogger<CitiesExtractor> logger)
+        public CitiesExtractor(CarDbContext context, IConfiguration configuration, ILogger<CitiesExtractor> logger)
         {
             this.context = context;
             this.configuration = configuration;
